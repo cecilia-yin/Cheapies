@@ -1,34 +1,40 @@
 import React from "react";
-import { Form, Button, InputGroup, FormControl } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import {
+  Form,
+  Button,
+  InputGroup,
+  FormControl,
+  Container,
+  Row,
+  Col,
+} from "react-bootstrap";
+import "./LandingPage.css";
 
 const LandingPage = () => {
-  const element = <FontAwesomeIcon icon={faSearch} />;
-  const v = (
-    <div>
-      <Form inline>
-        <Form.Label htmlFor="inlineFormInputGroupUsername2" srOnly>
-          Username
-        </Form.Label>
-        <InputGroup className="mb-2 mr-sm-2">
-          <InputGroup.Prepend>
-            <InputGroup.Text>{element}</InputGroup.Text>
-          </InputGroup.Prepend>
-          <FormControl
-            id="inlineFormInputGroupUsername2"
-            placeholder="What are you looking for"
-            style={{ width: 500 }}
-          />
-        </InputGroup>
-
-        <Button type="submit" className="mb-2">
-          Search
-        </Button>
-      </Form>
-    </div>
+  return (
+    <Container>
+      <Row>
+        <div style={{ width: 300, backgroundColor: "black", height: 100 }} />
+      </Row>
+      <Row xs={12} className="searchContainer">
+        <Form inline className="searchBar">
+          <Form.Label htmlFor="inlineFormInputGroupUsername2" srOnly>
+            Username
+          </Form.Label>
+          <InputGroup>
+            <FormControl
+              id="inlineFormInputGroupUsername2"
+              placeholder="&#xF002; Search Catalogue"
+              className="shadow-none"
+            />
+          </InputGroup>
+          <Button className="searchButton" type="submit">
+            GO
+          </Button>
+        </Form>
+      </Row>
+    </Container>
   );
-  return v;
 };
 
 export default LandingPage;
