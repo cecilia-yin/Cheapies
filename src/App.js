@@ -1,13 +1,14 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import Table from "./Table";
 import LandingPage from "./components/LandingPage";
+import SideRetailBar from "./SideRetailBar";
 
 function App() {
   return (
-    <div>
-      <LandingPage />
+    <div className="App">
+        <LandingPage />
+        <div>This is the trademe list</div>
+        <SideRetailBar />
     </div>
   );
 }
