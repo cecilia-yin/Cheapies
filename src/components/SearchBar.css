@@ -1,0 +1,17 @@
+#inlineFormInputGroupUsername2 {
+    height: 3em;
+    font-family: Arial, FontAwesome;
+    border-radius: 0px !important;
+}
+
+#inlineFormInputGroupUsername2:active {
+    outline: none !important;
+}
+
+.searchButton {
+    height: 3em;
+    background-color: #fcc66a !important;
+    font-weight: bold !important;
+    border: 1px #fcc66a solid !important;
+    border-radius: 0px !important;
+}
