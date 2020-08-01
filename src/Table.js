@@ -2,18 +2,32 @@ import React from "react";
 
 class Table extends React.Component {
 
+	constructor ( props ) {
+		super( props );
+
+		this.state = {
+			data: []
+		}
+	}
+
 	componentDidMount() {
 		const myHeaders = new Headers();
-		myHeaders.append("Content-Type", "application/json");
-		myHeaders.append("Authorization", "OAuth oauth_consumer_key=\"05BBDEDB2C2E73349E5C0F02C37BF90A\",oauth_token=\"E120C725F36E1610A1507732BC1FAE07\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"1596246902\",oauth_nonce=\"9mBfXAhEQh1\",oauth_version=\"1.0\",oauth_signature=\"wkrnszn8p4xBhnECcJC97fA7k3Y%3D\"");
+		myHeaders.append("Authorization", "OAuth oauth_consumer_key=\"05BBDEDB2C2E73349E5C0F02C37BF90A\",oauth_token=\"E120C725F36E1610A1507732BC1FAE07\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"1596254053\",oauth_nonce=\"Tr8RJKuiSfq\",oauth_version=\"1.0\",oauth_signature=\"sf3%2BXhLp1%2B21IoX8j9dixmN4FT4%3D\"");
+
 		const requestOptions = {
 			method: 'GET',
 			headers: myHeaders,
 			redirect: 'follow'
 		};
-		fetch("https://api.tmsandbox.co.nz/v1/Search/General.json?search_string=car", requestOptions)
-			.then(response => response.text())
-			.then(result => console.log(result))
+
+		fetch("https://api.tmsandbox.co.nz/v1/Search/General.json?search_string=iphone", requestOptions)
+			.then(response => response.json())
+			.then(result => {
+				console.log( result );
+				this.setState({
+					data: result.List
+				});
+			})
 			.catch(error => console.log('error', error));
 	}
 
@@ -29,24 +43,18 @@ class Table extends React.Component {
 				</tr>
 				</thead>
 				<tbody>
-				<tr>
-					<th scope="row">1</th>
-					<td>Mark</td>
-					<td>Otto</td>
-					<td>@mdo</td>
-				</tr>
-				<tr>
-					<th scope="row">2</th>
-					<td>Jacob</td>
-					<td>Thornton</td>
-					<td>@fat</td>
-				</tr>
-				<tr>
-					<th scope="row">3</th>
-					<td>Larry</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
-				</tr>
+				{
+					this.state.data.map( ( item, index ) => {
+						return (
+							<tr key={ item.ListingId }>
+								<th scope="row">{ item.Title }</th>
+								<th scope="row">{ item.Title }</th>
+								<th scope="row">{ item.Title }</th>
+								<th scope="row">{ item.Title }</th>
+							</tr>
+						);
+					})
+				}
 				</tbody>
 			</table>
 		);
