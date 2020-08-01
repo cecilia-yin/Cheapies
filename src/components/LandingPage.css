@@ -19,8 +19,8 @@
   border-radius: 0px !important;
 }
 
-#inlineFormInputGroupUsername2:active {
-  outline: none !important;
+#inlineFormInputGroupUsername2:focus {
+  border: 1px #d3d3d3 solid !important;
 }
 
 .searchButton {
