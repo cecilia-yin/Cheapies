@@ -7,23 +7,25 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
-        <Router>
-           <Switch>
-               <Route path="/iphone-x">
-                   <div className={ "displayPage" }>
-                       <div>
-                           <SearchBar />
-                       </div>
-                       <div>
-                           <SideRetailBar />
-                       </div>
-                   </div>
-               </Route>
-               <Route path="/">
-                   <LandingPage />
-               </Route>
-           </Switch>
-        </Router>
+      <div className={ "App" }>
+          <Router>
+              <Switch>
+                  <Route path="/iphone-x">
+                      <div className={ "displayPage" }>
+                          <div>
+                              <SearchBar />
+                          </div>
+                          <div>
+                              <SideRetailBar />
+                          </div>
+                      </div>
+                  </Route>
+                  <Route path="/">
+                      <LandingPage />
+                  </Route>
+              </Switch>
+          </Router>
+      </div>
   );
 }
 
