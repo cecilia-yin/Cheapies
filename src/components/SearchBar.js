@@ -6,6 +6,7 @@ import {
 	FormControl,
 } from "react-bootstrap";
 import "./LandingPage.css";
+import { Link } from "react-router-dom";
 
 export default function SearchBar() {
 	return (
@@ -20,9 +21,11 @@ export default function SearchBar() {
 					className="shadow-none"
 				/>
 			</InputGroup>
-			<Button className="searchButton" type="submit">
-				GO
-			</Button>
+			<Link to={ "/iphone-x" }>
+				<Button className="searchButton" type="submit">
+					GO
+				</Button>
+			</Link>
 		</Form>
 	);
 }
