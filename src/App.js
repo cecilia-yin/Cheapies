@@ -1,15 +1,29 @@
 import React from "react";
 import "./App.css";
 import LandingPage from "./components/LandingPage";
-import SideRetailBar from "./SideRetailBar";
+import SideRetailBar from "./components/SideRetailBar";
+import SearchBar from "./components/SearchBar";
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-        <LandingPage />
-        <div>This is the trademe list</div>
-        <SideRetailBar />
-    </div>
+        <Router>
+           <Switch>
+               <Route path="/iphone-x">
+                   <div className={ "displayPage" }>
+                       <div>
+                           <SearchBar />
+                       </div>
+                       <div>
+                           <SideRetailBar />
+                       </div>
+                   </div>
+               </Route>
+               <Route path="/">
+                   <LandingPage />
+               </Route>
+           </Switch>
+        </Router>
   );
 }
 
