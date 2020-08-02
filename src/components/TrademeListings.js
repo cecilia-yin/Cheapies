@@ -1,7 +1,7 @@
 import React from "react";
-import "./trademeListings.css";
+import "./TrademeListings.css";
 
-class trademeListings extends React.Component {
+class TrademeListings extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -114,4 +114,4 @@ class trademeListings extends React.Component {
   }
 }
 
-export default trademeListings;
+export default TrademeListings;
