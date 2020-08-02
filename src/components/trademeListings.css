@@ -1,0 +1,42 @@
+.imageDiv {
+  height: 80%;
+  width: 100%;
+  text-align: center;
+}
+
+.listingContent {
+  height: 20%;
+}
+
+.trademeListings {
+  border: 1px solid red;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+.listingCard {
+  padding: 2%;
+  border: 1px solid red;
+  width: 31%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.listingText {
+  border: 1px solid purple;
+  width: 100%;
+  font-size: 2vw;
+}
+
+.listingImage {
+  border: 1px solid red;
+  width: 100%;
+}
