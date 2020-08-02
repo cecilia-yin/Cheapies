@@ -30,7 +30,7 @@ class TrademeListings extends React.Component {
     };
 
     // Variable for Search Term
-    const searchTerm = "iphone x 64gb silver";
+    const searchTerm = "iphone xr 64gb";
     let results = [];
 
     await fetch(
@@ -75,7 +75,6 @@ class TrademeListings extends React.Component {
         <div className="trademeListings">
           {this.state.data.map((item, index) => {
             let imageUrl = item.PictureHref.replace("thumb", "tq");
-            console.log(item);
 
             return (
               <div key={item.ListingId} className="listingCard">
@@ -100,6 +99,11 @@ class TrademeListings extends React.Component {
                   {item.HasBuyNow && !item.IsBuyNowOnly && (
                     <h3 className=" listingText">{`Current Bid: ${item.PriceDisplay}`}</h3>
                   )}
+
+                  {
+                    item.IsNew ? <h3 className=" listingText">{`Condition: New`}</h3> :
+                        <h3 className=" listingText">{`Condition: Used`}</h3>
+                  }
 
                   <h3 className="listingText">{`Seller Rating: ${item.feedback.TotalCount}`}</h3>
                 </div>
