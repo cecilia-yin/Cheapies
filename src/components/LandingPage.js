@@ -1,18 +1,19 @@
 import React from "react";
 import {
-  Form,
   Button,
-  InputGroup,
-  FormControl,
-  Container,
+  Container, Form, FormControl, InputGroup,
   Row,
-  Col,
 } from "react-bootstrap";
 import "./LandingPage.css";
+import { Link } from "react-router-dom";
+
+function showProducts() {
+
+}
 
 const LandingPage = () => {
   return (
-    <Container>
+    <Container id={ "landingPage" }>
       <Row>
         <div style={{ width: 300, backgroundColor: "black", height: 100 }} />
       </Row>
@@ -23,14 +24,16 @@ const LandingPage = () => {
           </Form.Label>
           <InputGroup>
             <FormControl
-              id="inlineFormInputGroupUsername2"
-              placeholder="&#xF002; Search Catalogue"
-              className="shadow-none"
+                id="inlineFormInputGroupUsername2"
+                placeholder="&#xF002; Search Catalogue"
+                className="shadow-none"
             />
           </InputGroup>
-          <Button className="searchButton" type="submit">
-            GO
-          </Button>
+          <Link to={ "/iphone-x" }>
+            <Button className="searchButton" type="submit">
+              GO
+            </Button>
+          </Link>
         </Form>
       </Row>
     </Container>

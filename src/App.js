@@ -1,14 +1,31 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import Table from "./Table";
 import LandingPage from "./components/LandingPage";
+import SideRetailBar from "./components/SideRetailBar";
+import SearchBar from "./components/SearchBar";
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <LandingPage />
-    </div>
+      <div className={ "App" }>
+          <Router>
+              <Switch>
+                  <Route path="/iphone-x">
+                      <div className={ "displayPage" }>
+                          <div>
+                              <SearchBar />
+                          </div>
+                          <div>
+                              <SideRetailBar />
+                          </div>
+                      </div>
+                  </Route>
+                  <Route path="/">
+                      <LandingPage />
+                  </Route>
+              </Switch>
+          </Router>
+      </div>
   );
 }
 
