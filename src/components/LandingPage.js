@@ -6,26 +6,30 @@ import {
 } from "react-bootstrap";
 import "./LandingPage.css";
 import { Link } from "react-router-dom";
+import logo from '../cheapies-logo.png';
+// function showProducts() {
 
-function showProducts() {
-
-}
+// }
 
 const LandingPage = () => {
   return (
     <Container id={ "landingPage" }>
-      <Row>
-        <div style={{ width: 300, backgroundColor: "black", height: 100 }} />
-      </Row>
+      <div className="logoSection">
+        <img src={logo} className="logo"/>
+        <h1 className="nameHeading">Cheapies</h1>
+      </div>
       <Row xs={12} className="searchContainer">
         <Form inline className="searchBar">
+        <div className="subtitle">
+          <p>Compare TradeMe prices with other retailers.</p>
+        </div>
           <Form.Label htmlFor="inlineFormInputGroupUsername2" srOnly>
             Username
           </Form.Label>
           <InputGroup>
             <FormControl
                 id="inlineFormInputGroupUsername2"
-                placeholder="&#xF002; Search Catalogue"
+                placeholder="Search Catalogue"
                 className="shadow-none"
             />
           </InputGroup>

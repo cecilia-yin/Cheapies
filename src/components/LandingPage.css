@@ -1,21 +1,44 @@
+#landingPage{
+  margin-top: 25vh;
+}
+
 .searchContainer {
   width: 100%;
-  margin-top: 35vh;
-  /* transform: translateY(-50%); */
+  margin: auto!important;
+}
+
+.subtitle{
+  display: block;
+  width: 100%;
+}
+
+.logoSection{
+  display: flex;
+  margin: 1em auto;
+  justify-content: center;
+}
+
+.nameHeading{
+  line-height: 15vh;
+}
+
+.logo{
+  height: 15vh;
 }
 
 .searchBar {
+  /* margin-top: 25vh; */
   width: 100%;
   display: flex;
 }
 
 .input-group {
-  flex: 1 0 80%;
+  flex: 1 0 70%;
 }
 
 #inlineFormInputGroupUsername2 {
   height: 3em;
-  font-family: Arial, FontAwesome;
+  font-family: Arial;
   border-radius: 0px !important;
 }
 
@@ -25,6 +48,7 @@
 
 .searchButton {
   height: 3em;
+  width: 7em;
   background-color: #fcc66a !important;
   font-weight: bold !important;
   border: 1px #fcc66a solid !important;
