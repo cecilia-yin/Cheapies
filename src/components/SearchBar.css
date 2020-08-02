@@ -1,6 +1,22 @@
+.searchBarHeader{
+    padding: 1em;
+    display: flex;
+    border: 1px lightgrey solid;
+}
+
+.logoSection{
+    margin: 0.5em auto;
+    justify-content: center;
+}
+  
+.logoSmall{
+    height: 7vh;
+    margin: 0.5em 2em 0.5em 0.5em;
+}
+
 #inlineFormInputGroupUsername2 {
     height: 3em;
-    font-family: Arial, FontAwesome;
+    font-family: Arial;
     border-radius: 0px !important;
 }
 

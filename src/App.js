@@ -11,7 +11,7 @@ function App() {
       <div className={ "App" }>
           <Router>
               <Switch>
-                  <Route path="/iphone-x">
+                  <Route path="/catalog">
                       <div className={ "displayPage" }>
                           <div>
                               <SearchBar />

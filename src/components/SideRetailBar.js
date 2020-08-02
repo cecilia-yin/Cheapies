@@ -1,5 +1,6 @@
 import RetailProductCard from "./RetailProductCard";
 import React from "react";
+import "./sideRetailBar.css";
 
 class SideRetailBar extends React.Component {
 	constructor( props ) {
@@ -8,9 +9,9 @@ class SideRetailBar extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<h1> Retail Prices</h1>
-				<div style={{ overflow: "auto", height: "100vh" }}>
+			<div className="retailPriceSidebar">
+				<h1 className="retailTitle"> Retail Prices</h1>
+				<div style={{ overflow: "scroll", height: "100vh" }}>
 					<RetailProductCard
 						imageSrc={ "https://cdn.pricespy.co.nz/product/front/800/4471962.jpg" }
 						retailName={ "eSquare" }

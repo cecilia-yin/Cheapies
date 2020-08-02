@@ -40,7 +40,7 @@ class TrademeListings extends React.Component {
     )
       .then((response) => response.json())
       .then(async (result) => {
-        results = result.List.slice(0, 10);
+        results = result.List.slice(0, 9);
         for (let i = 0; i < results.length; i++) {
           // Fetch is Asynchronous - Need to behave synchronously
           await fetch(

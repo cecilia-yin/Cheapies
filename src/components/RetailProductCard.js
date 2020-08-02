@@ -7,7 +7,7 @@ class RetailProductCard extends React.Component {
 
 	render() {
 		return (
-			<div className="card mb-3" style={{ maxWidth: 300 }}>
+			<div className="card mb-3">
 				<div className="row no-gutters">
 					<div className="col-md-4">
 						<img src={ this.props.imageSrc } className="card-img" alt="image for phone" />

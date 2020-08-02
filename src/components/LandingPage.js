@@ -7,9 +7,6 @@ import {
 import "./LandingPage.css";
 import { Link } from "react-router-dom";
 import logo from '../cheapies-logo.png';
-// function showProducts() {
-
-// }
 
 const LandingPage = () => {
   return (
@@ -33,7 +30,7 @@ const LandingPage = () => {
                 className="shadow-none"
             />
           </InputGroup>
-          <Link to={ "/iphone-x" }>
+          <Link to={ "/catalog" }>
             <Button className="searchButton" type="submit">
               GO
             </Button>

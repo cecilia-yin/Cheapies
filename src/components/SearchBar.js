@@ -5,24 +5,30 @@ import {
 	InputGroup,
 	FormControl,
 } from "react-bootstrap";
-import "./LandingPage.css";
+import "./SearchBar.css";
+import logo from '../cheapies-logo.png'; 
 
 export default function SearchBar() {
 	return (
-		<Form inline className="searchBar">
-			<Form.Label htmlFor="inlineFormInputGroupUsername2" srOnly>
-				Username
-			</Form.Label>
-			<InputGroup>
-				<FormControl
-					id="inlineFormInputGroupUsername2"
-					placeholder="&#xF002; Search Catalogue"
-					className="shadow-none"
-				/>
-			</InputGroup>
-			<Button className="searchButton" type="submit">
-				GO
-			</Button>
-		</Form>
+		<div className="searchBarHeader">
+			<div className="logoSection">
+        <img src={logo} className="logoSmall"/>
+      </div>
+			<Form inline className="searchBar">
+				<Form.Label htmlFor="inlineFormInputGroupUsername2" srOnly>
+					Username
+				</Form.Label>
+				<InputGroup>
+					<FormControl
+						id="inlineFormInputGroupUsername2"
+						placeholder="Search Catalogue"
+						className="shadow-none"
+					/>
+				</InputGroup>
+				<Button className="searchButton" type="submit">
+					GO
+				</Button>
+			</Form>
+		</div>
 	);
 }
