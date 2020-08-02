@@ -1,5 +1,7 @@
 import React from "react";
 import "./TrademeListings.css";
+import SearchBar from "./SearchBar";
+import logo from '../cheapies-logo.png';
 
 class TrademeListings extends React.Component {
   constructor(props) {
@@ -30,7 +32,7 @@ class TrademeListings extends React.Component {
     };
 
     // Variable for Search Term
-    const searchTerm = "iphone x 64gb silver";
+    const searchTerm = "iphone xr 64gb";
     let results = [];
 
     await fetch(
@@ -72,41 +74,53 @@ class TrademeListings extends React.Component {
   render() {
     if (this.state.loading) {
       return (
+        <>
+        <div className="searchBarHeader">
+          <div className="logoSection">
+            <img src={logo} className="logoSmall"/>
+            <SearchBar/>
+          </div>
+        </div>
         <div className="trademeListings">
+
           {this.state.data.map((item, index) => {
             let imageUrl = item.PictureHref.replace("thumb", "tq");
-            console.log(item);
 
             return (
-              <div key={item.ListingId} className="listingCard">
-                <div className="imageDiv">
-                  <img className="listingImage" src={imageUrl} />
+                <div key={item.ListingId} className="listingCard">
+                  <div className="imageDiv">
+                    <img className="listingImage" src={imageUrl} />
+                  </div>
+                  <div className="listingContent">
+                    <h1 className="listingTitle listingText">{item.Title}</h1>
+                    {!item.HasBuyNow && !item.IsBuyNowOnly && (
+                      <h3 className=" listingText">{`Current Bid: ${item.PriceDisplay}`}</h3>
+                    )}
+
+                    {item.IsBuyNowOnly && (
+                      <h3 className=" listingText">{`Buy Now: $${item.BuyNowPrice}`}</h3>
+                    )}
+
+                    {item.HasBuyNow && !item.IsBuyNowOnly && (
+                      <h3 className=" listingText">{`Buy Now: $${item.BuyNowPrice}`}</h3>
+                    )}
+
+                    {item.HasBuyNow && !item.IsBuyNowOnly && (
+                      <h3 className=" listingText">{`Current Bid: ${item.PriceDisplay}`}</h3>
+                    )}
+
+                    {
+                      item.IsNew ? <h3 className=" listingText">{`Condition: New`}</h3> :
+                          <h3 className=" listingText">{`Condition: Used`}</h3>
+                    }
+
+                    <h3 className="listingText">{`Seller Rating: ${item.feedback.TotalCount}`}</h3>
+                  </div>
                 </div>
-
-                <div className="listingContent">
-                  <h1 className="listingTitle listingText">{item.Title}</h1>
-                  {!item.HasBuyNow && !item.IsBuyNowOnly && (
-                    <h3 className=" listingText">{`Current Bid: ${item.PriceDisplay}`}</h3>
-                  )}
-
-                  {item.IsBuyNowOnly && (
-                    <h3 className=" listingText">{`Buy Now: $${item.BuyNowPrice}`}</h3>
-                  )}
-
-                  {item.HasBuyNow && !item.IsBuyNowOnly && (
-                    <h3 className=" listingText">{`Buy Now: $${item.BuyNowPrice}`}</h3>
-                  )}
-
-                  {item.HasBuyNow && !item.IsBuyNowOnly && (
-                    <h3 className=" listingText">{`Current Bid: ${item.PriceDisplay}`}</h3>
-                  )}
-
-                  <h3 className="listingText">{`Seller Rating: ${item.feedback.TotalCount}`}</h3>
-                </div>
-              </div>
             );
           })}
         </div>
+        </>
       );
     } else {
       return <h1>Loading</h1>;

@@ -2,6 +2,21 @@
   background-color: #eee;
 }
 
+.searchBarHeader{
+  padding: 1em;
+  border: 1px lightgrey solid;
+}
+
+.logoSection{
+  margin: 0.5em auto;
+  justify-content: center;
+}
+
+.logoSmall{
+  height: 7vh;
+  margin: 0.5em 2em 0.5em 0.5em;
+}
+
 .trademeListings {
   margin: 1em;
   padding-bottom: 1em;
@@ -9,7 +24,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  overflow-y: scroll;
+  overflow: scroll;
 }
 
 .listingImage{

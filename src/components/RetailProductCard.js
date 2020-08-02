@@ -24,6 +24,14 @@ class RetailProductCard extends React.Component {
 									<p className="card-text"><small className="text-muted">{ this.props.price }</small></p>
 								</div>
 							</div>
+							<div className="row">
+								<div className="col-6">
+									<p className="card-text"><small className="text-muted">{ "Store rating" }</small></p>
+								</div>
+								<div className="col-6">
+									<p className="card-text"><small className="text-muted">{ this.props.rating }</small></p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
