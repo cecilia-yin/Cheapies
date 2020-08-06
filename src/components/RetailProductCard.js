@@ -17,9 +17,6 @@ class RetailProductCard extends React.Component {
 							<h5 className="card-title">{ this.props.retailName }</h5>
 							<hr/>
 							<div className="row">
-								{/*<div className="col-6">*/}
-								{/*	<p className="card-text"><small className="text-muted">{ this.props.productName }</small></p>*/}
-								{/*</div>*/}
 								<div className="col-6">
 									<p className="card-text"><small className="text-muted">{ this.props.price }</small></p>
 								</div>

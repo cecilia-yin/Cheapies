@@ -15,7 +15,7 @@ function App() {
                           <div>
                               <TrademeListings />
                           </div>
-                          <div>
+                          <div className="sidebar">
                               <SideRetailBar />
                           </div>
                       </div>

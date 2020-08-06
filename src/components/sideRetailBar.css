@@ -1,6 +1,9 @@
 .retailPriceSidebar{
   padding: 1em;
   background-color: #fcc66a;
+  max-height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
 }
 
 .retailTitle{
