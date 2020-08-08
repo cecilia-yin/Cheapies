@@ -25,32 +25,3 @@
 .logo{
   height: 15vh;
 }
-
-.searchBar {
-  /* margin-top: 25vh; */
-  width: 100%;
-  display: flex;
-}
-
-.input-group {
-  flex: 1 0 70%;
-}
-
-#inlineFormInputGroupUsername2 {
-  height: 3em;
-  font-family: Arial;
-  border-radius: 0px !important;
-}
-
-#inlineFormInputGroupUsername2:focus {
-  border: 1px #d3d3d3 solid !important;
-}
-
-.searchButton {
-  height: 3em;
-  width: 7em;
-  background-color: #fcc66a !important;
-  font-weight: bold !important;
-  border: 1px #fcc66a solid !important;
-  border-radius: 0px !important;
-}

@@ -77,7 +77,7 @@ class TrademeListings extends React.Component {
         <>
         <div className="searchBarHeader">
           <div className="logoSection">
-            <img src={logo} className="logoSmall"/>
+            <img src={logo} alt="logo" className="logoSmall"/>
             <SearchBar/>
           </div>
         </div>
@@ -89,7 +89,7 @@ class TrademeListings extends React.Component {
             return (
                 <div key={item.ListingId} className="listingCard">
                   <div className="imageDiv">
-                    <img className="listingImage" src={imageUrl} />
+                    <img className="listingImage" src={imageUrl} alt="listing img"/>
                   </div>
                   <div className="listingContent">
                     <h1 className="listingTitle listingText">{item.Title}</h1>

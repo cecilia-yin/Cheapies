@@ -1,12 +1,79 @@
 .retailPriceSidebar{
-  padding: 1em;
   background-color: #fcc66a;
-  max-height: 100vh;
+  height: 100vh;
   overflow-y: scroll;
   position: fixed;
+  transition: all ease 0.3s;
+  width: 85vw;
+  right: 0!important;
+  border: 1px orange solid;
+}
+
+.retailHeading{
+  position: fixed;
+  padding: 0.5em;
+  z-index: 600;
+  width: 85vw;
+  background-color: #fcc66a;
 }
 
 .retailTitle{
   text-align: center;
   color: white;
+}
+
+.retailers{
+  padding: 5em 1em 1em 1em;
+}
+
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
+}
+
+.openNav{
+  background-color: #fcc66a;
+  color: white;
+  padding: 1em 0.3em;
+  border: none;
+  font-size: 1.4em;
+  position: fixed;
+  top: 30vh;
+  right: 85vw;
+  outline: none;
+}
+
+.closeNav{
+  background-color: #fcc66a;
+  color: white;
+  padding: 1em 0.3em;
+  border: none;
+  font-size: 1.4em;
+  position: fixed;
+  top: 30vh;
+  right: 0;
+  outline: none;
+}
+
+@media (min-width: 1200px){
+
+  .retailPriceSidebar{
+    width: 25vw;
+    border: none;
+  }
+
+  .retailHeading{
+    width: 25vw;
+  }
+
+  .hide{
+    display: block;
+  }
+
+  .openNav, .closeNav{
+    display: none;
+  }
 }

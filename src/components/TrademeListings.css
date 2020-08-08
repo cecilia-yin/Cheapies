@@ -5,6 +5,7 @@
 .searchBarHeader{
   padding: 1em;
   border: 1px lightgrey solid;
+  width: 100vw;
 }
 
 .logoSection{
@@ -13,7 +14,7 @@
 }
 
 .logoSmall{
-  height: 7vh;
+  height: 5vh;
   margin: 0.5em 2em 0.5em 0.5em;
 }
 
@@ -49,4 +50,11 @@
 
 .listingText {
   font-size: 0.9em;
+}
+
+@media (min-width: 1200px){
+
+  .searchBarHeader{
+    width: 75vw;
+  }
 }
